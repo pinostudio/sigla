@@ -1,3 +1,8 @@
+/*
+ *
+ * FONTS
+ *
+ */
 @font-face {
   font-family: "Product Sans Light";
   src: url("../fonts/ProductSans-Light.woff2") format("woff2"), url("../fonts/ProductSans-Light.woff") format("woff");
@@ -21,6 +26,154 @@
   src: url("../fonts/Canopee-Regular.woff2") format("woff2"), url("../fonts/Canopee-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+/*
+ *
+ * COLORS
+ *
+ */
+/*
+ *
+ * BREAKPOINTS
+ *
+ */
+/*
+ *
+ * GLOBAL
+ *
+ */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #000;
+  font-family: "Product Sans Light", sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/*
+ *
+ * NAV
+ *
+ */
+#sidebar {
+  z-index: 100;
+  height: 100vh;
+  width: auto;
+  position: fixed;
+}
+#sidebar .sidebar-container {
+  height: 100vh;
+  background-color: #DA6D21;
+  width: 165px;
+  padding: 0 50px;
+}
+#sidebar .sidebar-container .logomark-container {
+  height: 33%;
+}
+#sidebar .sidebar-container .logomark-container .logomark {
+  height: 70px;
+  position: absolute;
+  top: 50px;
+}
+#sidebar .sidebar-container .menu-container {
+  height: 47%;
+}
+#sidebar .sidebar-container .menu-container .menu {
+  position: absolute;
+}
+#sidebar .sidebar-container .menu-container .menu a {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-family: "Product Sans Regular", sans-serif;
+  letter-spacing: 1px;
+}
+#sidebar .sidebar-container .menu-container .menu a li {
+  list-style-type: none;
+  padding: 8px 0;
+}
+#sidebar .sidebar-container .logotype-container {
+  height: 20%;
+}
+#sidebar .sidebar-container .logotype-container .logotype {
+  height: 50px;
+  position: absolute;
+  bottom: 60px;
+}
+
+#topRightNav {
+  z-index: 100;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  text-align: right;
+  font-size: 1.1em;
+  text-align: right;
+}
+#topRightNav ul {
+  display: flex;
+  list-style-type: none;
+}
+#topRightNav ul li {
+  padding-left: 20px;
+}
+#topRightNav .search {
+  height: 1.21em;
+}
+
+#bottomRightNav {
+  z-index: 100;
+  position: fixed;
+  right: 50px;
+  bottom: 40px;
+}
+#bottomRightNav ul {
+  display: flex;
+}
+#bottomRightNav ul li {
+  list-style-type: none;
+  padding-left: 15px;
+}
+#bottomRightNav ul li .social {
+  height: 30px;
+}
+
+/*
+ *
+ * HOME
+ *
+ */
+#home {
+  position: fixed;
+}
+#home #content-container {
+  position: absolute;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 400vw;
+  padding-left: 264px;
+}
+#home #content-container .flex-container {
+  height: 92vh;
+  width: 100%;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

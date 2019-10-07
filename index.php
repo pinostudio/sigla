@@ -1,41 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
+<?php include 'partials/header.php'; ?>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-width=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<title>Sigla</title>
+<main id="home">
+	<div id="content-container">
+		<div class="flex-container red">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="#"> CLICK ME !!!</a>
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
 
-	<!-- Fonts -->
+		<div class="flex-container blue">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
 
+		
+		<div class="flex-container yellow">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
 
-	<!-- Custom CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-</head>
-<body>
-
-	<p class="light">Light</p>
-	<p class="medium">Medium</p>
-	<p class="regular">Regular</p>
-	<p class="heading">Canopee</p>
-	<!-- Greensock -->
-	<script type="text/javascript" src="assets/js/greensock-js-2.1.3/src/minified/TweenMax.min.js"></script>
-	<script type="text/javascript" src="assets/js/greensock-js-2.1.3/src/minified/TimelineMax.min.js"></script>
-
-	<!-- Scrollmagic -->
-	<script type="text/javascript" src="assets/js/scrollmagic-2.0.7/scrollmagic/uncompressed/ScrollMagic.js"></script>
-	<script type="text/javascript" src="assets/js/scrollmagic-2.0.7/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
-	<script type="text/javascript" src="assets/js/scrollmagic-2.0.7/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+		
+		<div class="flex-container red">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		
+	</div>
 	
+</main>
 
-	<!-- Custom JS -->
-	<script type="text/javascript" src="assets/js/custom.js"></script>
-
-</body>
-</html>
+<?php include 'partials/footer.php'; ?>
