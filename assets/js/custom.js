@@ -1,19 +1,32 @@
-// Horizontal 
-Draggable.create("#content-container", {
-    bounds:"#home",
-		allowNativeTouchScrolling:false,
-    type:"x"
-    }
-)
+// Drag Screen Left & Right
+// Draggable.create("#content-container", {
+ //    bounds:"#home",
+	// allowNativeTouchScrolling:true,
+ //    type:"x"
+ //    }
+// )
 
-TweenMax.set("body", {overflowY:'scroll'});
+// Scrolling Behavior
+var w = window.innerWidth;
 
-var scrollSpeed = 0.75;
-var scrollHeight = 10000;
+if (w > 993) {
+	TweenMax.set("body", {overflowY:'scroll'});
 
-TweenMax.set("body", {height:scrollHeight, overflowY:'scroll'});
+	var scrollSpeed = 0.75;
+	var scrollHeight = 10000;
 
-$(document).on("scroll", function (){
-	const pixels = $(document).scrollTop();
-	TweenMax.to('#content-container',1,{x:-0.5 * pixels})
-})
+	TweenMax.set("body", {height:scrollHeight, overflowY:'scroll'});
+
+	$(document).on("scroll", function (){
+		const pixels = $(document).scrollTop();
+		TweenMax.to('#content-container', 1, {x:-0.5 * pixels})
+	})
+}
+
+// Mobile Nav Toggle
+$(document).ready(function(){
+	$('#mobileNavTrigger').click(function(){
+		$(this).toggleClass('open');
+        $('#mobileNavMenu').fadeToggle();
+	});
+});
