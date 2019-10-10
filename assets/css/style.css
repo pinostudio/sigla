@@ -18,7 +18,7 @@
 @font-face {
   font-family: "Product Sans Medium";
   src: url("../fonts/ProductSans-Medium.woff2") format("woff2"), url("../fonts/ProductSans-Medium.woff") format("woff");
-  font-weight: 500;
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
@@ -57,54 +57,100 @@ a {
   text-decoration: none;
 }
 
+.heading {
+  font-family: "Canopee", sans-serif;
+  font-size: 4.7em;
+  font-weight: 500;
+}
+
+.label {
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+
+.flex-container {
+  height: 100vh;
+  width: 100vw;
+  padding: 100px 0;
+}
+
+@media only screen and (min-width: 601px) {
+  .small-only {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .medium-only {
+    display: none;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .medium-only {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .large-and-up {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .medium-and-down {
+    display: none;
+  }
+}
+
 /*
  *
  * NAV
  *
  */
-#sidebar {
+#webNav {
   z-index: 100;
   height: 100vh;
   width: auto;
   position: fixed;
 }
-#sidebar .sidebar-container {
+#webNav .sidebar-container {
   height: 100vh;
   background-color: #DA6D21;
   width: 165px;
   padding: 0 50px;
 }
-#sidebar .sidebar-container .logomark-container {
+#webNav .sidebar-container .logomark-container {
   height: 33%;
 }
-#sidebar .sidebar-container .logomark-container .logomark {
+#webNav .sidebar-container .logomark-container .logomark {
   height: 70px;
   position: absolute;
   top: 50px;
 }
-#sidebar .sidebar-container .menu-container {
+#webNav .sidebar-container .menu-container {
   height: 47%;
 }
-#sidebar .sidebar-container .menu-container .menu {
+#webNav .sidebar-container .menu-container .menu {
   position: absolute;
 }
-#sidebar .sidebar-container .menu-container .menu a {
+#webNav .sidebar-container .menu-container .menu a {
   text-transform: uppercase;
   font-size: 1.1em;
   font-family: "Product Sans Regular", sans-serif;
   letter-spacing: 1px;
 }
-#sidebar .sidebar-container .menu-container .menu a li {
+#webNav .sidebar-container .menu-container .menu a li {
   list-style-type: none;
   padding: 8px 0;
 }
-#sidebar .sidebar-container .logotype-container {
+#webNav .sidebar-container .logotype-container {
   height: 20%;
 }
-#sidebar .sidebar-container .logotype-container .logotype {
+#webNav .sidebar-container .logotype-container .logotype {
   height: 50px;
   position: absolute;
-  bottom: 60px;
+  bottom: 45px;
 }
 
 #topRightNav {
@@ -131,7 +177,7 @@ a {
   z-index: 100;
   position: fixed;
   right: 50px;
-  bottom: 40px;
+  bottom: 35px;
 }
 #bottomRightNav ul {
   display: flex;
@@ -159,11 +205,33 @@ a {
   width: 400vw;
   padding-left: 264px;
 }
-#home #content-container .flex-container {
-  height: 92vh;
-  width: 100%;
+#home #content-container .flex-container:first-child {
+  padding-left: 90px;
+  padding-right: 90px;
+  width: 80vw;
 }
-
+#home #content-container .flex-container:first-child .content {
+  height: calc(100% - 215px);
+}
+#home #content-container .flex-container:first-child .content .primary-heading-group {
+  height: 155px;
+  padding-bottom: 17px;
+}
+#home #content-container .flex-container:first-child .content .primary-heading-group .heading {
+  padding-top: 25px;
+}
+#home #content-container .flex-container:first-child .content .hero {
+  height: calc(100% - 172px);
+  background: pink;
+}
+#home #content-container .flex-container:first-child .content .hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#home #content-container .flex-container:nth-child(2) {
+  background: pink;
+}
 .yellow {
   background-color: yellow;
 }

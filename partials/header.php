@@ -16,8 +16,13 @@
 
 </head>
 <body>
+	<!-- Navigation for Mobile -->
+	<nav id="mobileNav">
+		
+	</nav>
+
 	<!-- Navigation for Web -->
-	<nav id="sidebar">
+	<nav id="webNav" class="large-and-up">
 		<div class="sidebar-container">
 			<div class="logomark-container">
 				<a href="index.php">
@@ -53,11 +58,11 @@
 		</div>
 	</nav>
 
-	<div id="topRightNav">
+	<div id="topRightNav" class="large-and-up">
 		<ul>
 			<a href="#">
 				<li>
-					<img src="assets/img/icons/logomark.svg" class="search">
+					<img src="assets/img/icons/search.svg" class="search">
 				</li>
 			</a>
 			<a href="#">
@@ -68,21 +73,21 @@
 		</ul>
 	</div>
 
-	<div id="bottomRightNav">
+	<div id="bottomRightNav" class="large-and-up">
 		<ul>
 			<a href="#">
 				<li>
-					<img src="assets/img/icons/logomark.svg" class="social">
+					<img src="assets/img/icons/facebook.svg" class="social">
 				</li>
 			</a>
 			<a href="#">
 				<li>
-					<img src="assets/img/icons/logomark.svg" class="social">
+					<img src="assets/img/icons/instagram.svg" class="social">
 				</li>
 			</a>
 			<a href="#">
 				<li>
-					<img src="assets/img/icons/logomark.svg" class="social">
+					<img src="assets/img/icons/pinterest.svg" class="social">
 				</li>
 			</a>
 		</ul>

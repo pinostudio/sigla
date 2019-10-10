@@ -24,7 +24,7 @@
     font-family: 'Product Sans Medium';
     src: url('../fonts/ProductSans-Medium.woff2') format('woff2'),
         url('../fonts/ProductSans-Medium.woff') format('woff');
-    font-weight: 500;
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -114,6 +114,52 @@ a {
     text-decoration: none;
 }
 
+.heading {
+    font-family: $serif;
+    font-size: 4.7em;
+    font-weight: 500;
+}
+
+.label {
+    font-size: 1em;
+    letter-spacing: .05em;
+}
+
+.flex-container {
+    height: 100vh;
+    width: 100vw;
+    padding: 100px 0;
+}
+
+.small-only {
+    @include medium-and-up {
+        display: none;
+    }
+}
+
+.medium-only {
+    @include small-only {
+        display: none;
+    }
+
+    @include large-and-up {
+        display: none;
+    }
+}
+
+.large-and-up {
+    @include medium-and-down {
+        display: none;
+    }
+}
+
+.medium-and-down {
+    @include large-and-up {
+        display: none;
+    }
+}
+
+
 
 /*
  *
@@ -121,7 +167,7 @@ a {
  *
  */
 
-#sidebar {
+#webNav {
     z-index: 100;
     height: 100vh;
     width: auto;
@@ -173,7 +219,7 @@ a {
             .logotype {
                 height: 50px;
                 position: absolute;
-                bottom: 60px;
+                bottom: 45px;
             }
         }
     }
@@ -208,7 +254,7 @@ a {
     z-index: 100;
     position: fixed;
     right: 50px;
-    bottom: 40px;
+    bottom: 35px;
 
     ul {
         display: flex;
@@ -233,7 +279,7 @@ a {
 
 #home {
     position: fixed;
-    // left: 264px;
+
     #content-container {
         position: absolute;
         display: flex;
@@ -241,11 +287,51 @@ a {
         width: 400vw;
         padding-left: 264px;
 
-        .flex-container {
-            height: 92vh;
-            width: 100%;
-            // float: right;
+        .flex-container:first-child {
+            padding-left: 90px; 
+            padding-right: 90px;
+            width: 80vw;
+
+            .content {
+                height: calc(100% - 215px);   
+                // background: yellow;
+
+                .primary-heading-group {
+                    height: 155px;
+                    padding-bottom: 17px;
+
+                    .heading {
+                        padding-top: 25px;
+                    }
+                }
+
+                .hero {
+                    height: calc(100% - 172px);
+                    background: pink;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
         }
+
+        .flex-container:nth-child(2) {
+            background: pink;
+        }
+
+        .flex-container:nth-child(3) {
+
+        }
+
+        .flex-container:nth-child(4) {
+
+        }
+
+        
     }
 }
 
