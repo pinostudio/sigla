@@ -24,7 +24,7 @@
 		</a>
 	</nav>
 
-	<div class="trigge-container">
+	<div class="trigger-container">
 		<div id="mobileNavTrigger" class="medium-and-down">
 			<span></span>
 			<span></span>
