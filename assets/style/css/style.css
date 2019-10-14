@@ -42,6 +42,10 @@
  * GRID
  *
  */
+.row {
+  clear: both;
+}
+
 .col {
   float: left;
   width: 100%;
@@ -294,17 +298,41 @@ a {
   width: 100%;
 }
 
+.thumbnail {
+  height: 140px;
+  width: 140px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .thumbnail {
+    height: 280px;
+    width: 280px;
+  }
+}
 @media only screen and (min-width: 993px) {
+  .thumbnail {
+    height: 260px;
+    width: 280px;
+  }
+}
+
+@media only screen and (orientation: landscape) {
   #content-container {
     position: absolute;
     display: flex;
     flex-wrap: nowrap;
     width: 400vw;
+  }
+}
+@media only screen and (min-width: 993px) and (orientation: landscape) {
+  #content-container {
     padding-left: 264px;
   }
 }
 
-@media only screen and (min-width: 993px) {
+.flex-container {
+  clear: both;
+}
+@media only screen and (orientation: landscape) {
   .flex-container {
     height: 100vh;
     width: 100vw;
@@ -312,7 +340,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (orientation: portrait) {
   .flex-container:first-child {
     padding-top: 70px;
   }
@@ -577,8 +605,156 @@ a {
 
 /*
  *
+ * NAV
+ *
+ */
+#mobileFooter {
+  background: #A3391C;
+}
+#mobileFooter img {
+  height: 20px;
+}
+
+/*
+ *
  * HOME
  *
  */
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:first-child .hero {
+    height: calc(100vh - 300px);
+  }
+  #home #content-container .flex-container:first-child .background-container {
+    background: #8682A3;
+    height: 230px;
+    position: relative;
+  }
+  #home #content-container .flex-container:first-child .background-container .primary-heading-group {
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #home #content-container .flex-container:first-child .background-container .primary-heading-group .heading {
+    padding: 5px 0;
+  }
+  #home #content-container .flex-container:first-child .background-container .primary-heading-group .btn-container {
+    text-align: right;
+    padding-top: 10px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper {
+    width: 70%;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper .images {
+    padding: 50px 0 25px;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper .images {
+    padding: 50px 0;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper .images .img-container:first-child {
+    height: 300px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper .images .img-container:nth-child(2) {
+    height: 100px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper .images .img-container:last-child {
+    height: 200px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper .text {
+    padding-bottom: 50px;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper .text {
+    padding: 150px 0 0 30px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper .text h3 {
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper .text p {
+    padding-bottom: 25px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(2) .wrapper .text .btn-container {
+    text-align: right;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(3) .hero {
+    height: 300px;
+  }
+  #home #content-container .flex-container:nth-child(3) .background-container {
+    background: #F4B10E;
+    padding: 30px 0;
+  }
+  #home #content-container .flex-container:nth-child(3) .background-container .primary-heading-group {
+    width: 85%;
+    margin: 0 auto;
+  }
+  #home #content-container .flex-container:nth-child(3) .background-container .primary-heading-group .heading {
+    padding: 5px 0;
+  }
+  #home #content-container .flex-container:nth-child(3) .background-container .primary-heading-group .btn-container {
+    text-align: right;
+    padding-top: 10px;
+  }
+  #home #content-container .flex-container:nth-child(3) .thumbnail-group .thumbnail {
+    display: inline-block;
+  }
+  #home #content-container .flex-container:nth-child(3) .thumbnail-group .primary-heading-group {
+    width: 85%;
+    margin: 0 auto;
+    display: inline-block;
+    width: calc(100vw - 150px);
+    vertical-align: top;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(3) .thumbnail-group .primary-heading-group {
+    width: calc(100vw - 300px);
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 993px) and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(3) .thumbnail-group .primary-heading-group {
+    width: calc(100vw - 300px);
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(3) .thumbnail-group .primary-heading-group .heading {
+    padding: 5px 0;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .flex-container:nth-child(3) .thumbnail-group .primary-heading-group .btn-container {
+    text-align: right;
+    padding-top: 10px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

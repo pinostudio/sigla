@@ -1,4 +1,3 @@
-
 /*
  *
  * GLOBAL
@@ -60,21 +59,40 @@ a {
     }
 }
 
+.thumbnail {
+    height: 140px;
+    width: 140px;
+
+    @include medium-only {
+        height: 280px;
+        width: 280px;
+    }
+
+    @include large-and-up {
+        height: 260px;
+        width: 280px;
+    }
+}
+
 // Manage Scrolling Behavior
 
 #content-container {
-
-    @include large-and-up {
+    @include landscape {
         position: absolute;
         display: flex;
         flex-wrap: nowrap;
         width: 400vw;
+    }
+
+    @include l-large-and-up {
         padding-left: 264px;
     }
 }
 
 .flex-container {
-    @include large-and-up {
+    clear: both;
+
+    @include landscape {
         height: 100vh;
         width: 100vw;
         padding: 100px 0;
@@ -82,7 +100,7 @@ a {
 }
 
 .flex-container:first-child {
-    @include medium-and-down {
+    @include portrait {
         padding-top: 70px;
     }
 }
@@ -123,7 +141,6 @@ a {
  */
 
 #mobileNav {
-    // height: 80px;
     width: 100%;
     background: white;
     position: fixed;
@@ -141,18 +158,11 @@ a {
 }
 
 #mobileNavTrigger {
-    // display: inline-block;
-    // position: absolute;
-    // right: 76px;
-    // top: 50%;
-    // transform: translate(0, -50%);
     z-index: 102;
     width: 45px;
-    // height: 20px;
     position: fixed;
     top: 20px;
     right: 30px;
-    // margin: 50px auto;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -164,17 +174,11 @@ a {
     cursor: pointer;
 
     span {
-        // height: .8px;
-        // width: 40px;
-        // background: $black;
-        // display: block;
-        // margin: 5px 0;
         display: block;
         position: absolute;
         height: 1px;
         width: 100%;
         background: $black;
-        // border-radius: 9px;
         opacity: 1;
         left: 0;
         -webkit-transform: rotate(0deg);
@@ -270,7 +274,6 @@ a {
 
     .logotype-container {
         height: 20%;
-        // background-color: blue;
 
         .logotype {
             padding: 0 30px;
@@ -315,7 +318,6 @@ a {
 
         .logomark-container {
             height: 33%;
-            // background-color: yellow;
 
             .logomark {
                 height: 70px;
@@ -326,10 +328,8 @@ a {
 
         .menu-container {
             height: 47%;
-            // background-color: red;
 
             .menu {
-                // padding-top: 100px;
                 position: absolute;
 
                 a {
@@ -348,7 +348,6 @@ a {
 
         .logotype-container {
             height: 20%;
-            // background-color: blue;
 
             .logotype {
                 height: 50px;
@@ -405,11 +404,179 @@ a {
 
 /*
  *
+ * NAV
+ *
+ */
+
+#mobileFooter {
+    background: $berry;
+
+    img {
+        height: 20px;
+    }
+}
+
+/*
+ *
  * HOME
  *
  */
 
 #home {
+    #content-container {
+        .flex-container:first-child {
+            @include portrait {
+                .hero {
+                    height: calc(100vh - 300px);
+                }
+
+                .background-container {
+                    background: $mauve;
+                    height: 230px;
+                    position: relative;
+
+                    .primary-heading-group {
+                        width: 85%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        .heading {
+                            padding: 5px 0;
+                        }
+
+                        .btn-container {
+                            text-align: right;
+                            padding-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .flex-container:nth-child(2) {
+            @include portrait {
+                .wrapper {
+                    width: 80%;
+                    margin: 0 auto;
+
+                    @include p-medium-only {
+                        width: 70%;
+                    }
+
+                    .images {
+                        padding: 50px 0 25px;
+
+                        @include p-medium-only {
+                            padding: 50px 0;
+                        }
+
+                        .img-container:first-child {
+                            height: 300px;
+                        }
+
+                        .img-container:nth-child(2) {
+                            height: 100px;
+                        }
+
+                        .img-container:last-child {
+                            height: 200px;
+                        }                    
+                    }
+
+                    .text {
+                        padding-bottom: 50px;
+
+                        @include p-medium-only {
+                            padding: 150px 0 0 30px;
+                        }
+
+                        h3 {
+                            padding-bottom: 30px;
+                        }
+
+                        p {
+                            padding-bottom: 25px; 
+                        }
+
+                        .btn-container {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+
+        .flex-container:nth-child(3) {
+            @include portrait {
+                .hero {
+                    height: 300px;
+                }
+
+                .background-container {
+                    background: $sunflower;
+                    padding: 30px 0;
+
+                    .primary-heading-group {
+                        width: 85%;
+                        margin: 0 auto;
+
+                        .heading {
+                            padding: 5px 0;
+                        }
+
+                        .btn-container {
+                            text-align: right;
+                            padding-top: 10px;
+                        }
+                    }
+                }
+
+                .thumbnail-group {
+                    .thumbnail {
+                        display: inline-block;   
+                    }
+
+                    .primary-heading-group {
+                        width: 85%;
+                        margin: 0 auto;
+                        display: inline-block;
+                        width: calc(100vw - 150px);
+                        // height: 150px;
+                        vertical-align: top;
+
+                        @include p-medium-only {
+                            width: calc(100vw - 300px);
+                        }
+
+                        @include p-large-and-up {
+                            width: calc(100vw - 300px);
+                        }
+
+                        .heading {
+                            padding: 5px 0;
+                        }
+
+                        .btn-container {
+                            text-align: right;
+                            padding-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+         .flex-container:nth-child(4) {
+            @include portrait {
+                
+            }
+        }
+
+        
+    }
+    
+
     // @include large-and-up {
     //     position: fixed;
     // }
