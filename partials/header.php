@@ -12,7 +12,7 @@
 	<link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/css/style.css">
 
 </head>
 <body>

@@ -1,0 +1,42 @@
+/*
+ *
+ * FONTS
+ *
+ */
+
+@font-face {
+    font-family: 'Product Sans Light';
+    src: url('../../fonts/ProductSans-Light.woff2') format('woff2'),
+        url('../../fonts/ProductSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Product Sans Regular';
+    src: url('../../fonts/ProductSans-Regular.woff2') format('woff2'),
+        url('../../fonts/ProductSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Product Sans Medium';
+    src: url('../../fonts/ProductSans-Medium.woff2') format('woff2'),
+        url('../../fonts/ProductSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Canopee';
+    src: url('../../fonts/Canopee-Regular.woff2') format('woff2'),
+        url('../../fonts/Canopee-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$sans-light: "Product Sans Light", sans-serif;
+$sans-medium: "Product Sans Medium", sans-serif;
+$sans-regular: "Product Sans Regular", sans-serif;
+$serif: "Canopee", sans-serif;

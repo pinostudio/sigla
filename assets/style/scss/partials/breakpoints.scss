@@ -1,0 +1,95 @@
+/*
+ *
+ * BREAKPOINTS
+ *
+ */
+
+// General
+
+@mixin xsmall-only {
+  @media only screen and (max-width: 349px) {@content;}
+}
+
+@mixin small-only {
+  @media only screen and (min-width: 350px) and (max-width: 767px) {@content;}
+}
+
+@mixin medium-and-up {
+  @media only screen and (min-width: 768px) {@content;}
+}
+
+@mixin medium-and-down {
+  @media only screen and (max-width: 992px) {@content;}
+}
+
+@mixin medium-only {
+  @media only screen and (min-width: 768px) and (max-width: 992px) {@content;}
+}
+
+@mixin large-and-up {
+  @media only screen and (min-width: 993px) {@content;}
+}
+
+@mixin xlarge-and-up {
+  @media (min-width: 2000px) {@content;}
+}
+
+// Portrait
+
+@mixin p-xsmall-only {
+  @media only screen and (max-width: 349px)  and (orientation: portrait) {@content;}
+}
+
+@mixin p-small-only {
+  @media only screen and (min-width: 350px) and (max-width: 767px)  and (orientation: portrait) {@content;}
+}
+
+@mixin p-medium-and-up {
+  @media only screen and (min-width: 768px)  and (orientation: portrait) {@content;}
+}
+
+@mixin p-medium-and-down {
+  @media only screen and (max-width: 992px)  and (orientation: portrait) {@content;}
+}
+
+@mixin p-medium-only {
+  @media only screen and (min-width: 768px) and (max-width: 992px)  and (orientation: portrait) {@content;}
+}
+
+@mixin p-large-and-up {
+  @media only screen and (min-width: 993px)  and (orientation: portrait) {@content;}
+}
+
+@mixin p-xlarge-and-up {
+  @media (min-width: 2000px) and (orientation: portrait) {@content;}
+}
+
+// Landscape
+
+@mixin l-xsmall-only {
+  @media only screen and (max-width: 349px)  and (orientation: landscape) {@content;}
+}
+
+@mixin l-small-only {
+  @media only screen and (min-width: 350px) and (max-width: 767px) and (orientation: landscape) {@content;}
+}
+
+@mixin l-medium-and-up {
+  @media only screen and (min-width: 768px)  and (orientation: landscape) {@content;}
+}
+
+@mixin l-medium-and-down {
+  @media only screen and (max-width: 992px)  and (orientation: landscape) {@content;}
+}
+
+@mixin l-medium-only {
+  @media only screen and (min-width: 768px) and (max-width: 992px)  and (orientation: landscape) {@content;}
+}
+
+@mixin l-large-and-up {
+  @media only screen and (min-width: 993px)  and (orientation: landscape) {@content;}
+}
+
+@mixin l-xlarge-and-up {
+  @media (min-width: 2000px)  and (orientation: landscape) {@content;}
+}
