@@ -266,11 +266,24 @@ a {
 .heading {
   font-family: "Canopee", sans-serif;
   font-weight: 500;
-  font-size: 2.5em;
+  font-size: 3.2em;
+  line-height: 1;
 }
 @media only screen and (min-width: 993px) {
   .heading {
     font-size: 4.7em;
+  }
+}
+
+.sans-heading {
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 993px) {
+  .sans-heading {
+    font-size: 2em;
   }
 }
 
@@ -284,6 +297,24 @@ a {
   }
 }
 
+.preview-text {
+  font-size: 0.9em;
+}
+@media only screen and (min-width: 993px) {
+  .preview-text {
+    font-size: 1em;
+  }
+}
+
+p {
+  font-size: 1em;
+}
+@media only screen and (min-width: 993px) {
+  p {
+    font-size: 0.9em;
+  }
+}
+
 .button {
   text-transform: uppercase;
   font-family: "Product Sans Medium", sans-serif;
@@ -292,6 +323,26 @@ a {
   border: 1px solid #000;
   display: inline-block;
 }
+.wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .wrapper {
+    width: 85%;
+  }
+}
+
+.primary-heading-group {
+  width: 85%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  .primary-heading-group {
+    width: 85%;
+  }
+}
+
 .img-container img {
   object-fit: cover;
   height: 100%;
@@ -610,8 +661,28 @@ a {
  */
 #mobileFooter {
   background: #A3391C;
+  height: 30px;
+  padding: 25px;
 }
-#mobileFooter img {
+#mobileFooter .logotype-container {
+  display: inline-block;
+}
+#mobileFooter .logotype-container img {
+  height: 30px;
+}
+#mobileFooter .social-icons {
+  display: inline-block;
+  float: right;
+  padding-top: 5px;
+}
+#mobileFooter .social-icons ul {
+  display: flex;
+  list-style: none;
+}
+#mobileFooter .social-icons ul a {
+  padding-left: 10px;
+}
+#mobileFooter .social-icons ul a img {
   height: 20px;
 }
 
@@ -620,140 +691,178 @@ a {
  * HOME
  *
  */
+#home #content-container p {
+  font-size: 0.9em;
+}
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:first-child .hero {
+  #home #content-container .featured-article .hero {
     height: calc(100vh - 300px);
   }
-  #home #content-container .flex-container:first-child .background-container {
+  #home #content-container .featured-article .background-container {
     background: #8682A3;
     height: 230px;
     position: relative;
   }
-  #home #content-container .flex-container:first-child .background-container .primary-heading-group {
-    width: 85%;
+  #home #content-container .featured-article .background-container .primary-heading-group {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  #home #content-container .flex-container:first-child .background-container .primary-heading-group .heading {
-    padding: 5px 0;
+  #home #content-container .featured-article .background-container .primary-heading-group .heading {
+    padding: 10px 0 0 0;
   }
-  #home #content-container .flex-container:first-child .background-container .primary-heading-group .btn-container {
+  #home #content-container .featured-article .background-container .primary-heading-group .btn-container {
     text-align: right;
     padding-top: 10px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper {
-    width: 70%;
-  }
-}
-@media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper .images {
+  #home #content-container .about .wrapper .images {
     padding: 50px 0 25px;
   }
 }
 @media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper .images {
+  #home #content-container .about .wrapper .images {
     padding: 50px 0;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper .images .img-container:first-child {
+  #home #content-container .about .wrapper .images .img-container:first-child {
     height: 300px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper .images .img-container:nth-child(2) {
+  #home #content-container .about .wrapper .images .img-container:nth-child(2) {
     height: 100px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper .images .img-container:last-child {
+  #home #content-container .about .wrapper .images .img-container:last-child {
     height: 200px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper .text {
+  #home #content-container .about .wrapper .text {
     padding-bottom: 50px;
   }
 }
 @media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper .text {
+  #home #content-container .about .wrapper .text {
     padding: 150px 0 0 30px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper .text h3 {
+  #home #content-container .about .wrapper .text h3 {
     padding-bottom: 30px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper .text p {
+  #home #content-container .about .wrapper .text p {
     padding-bottom: 25px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(2) .wrapper .text .btn-container {
+  #home #content-container .about .wrapper .text .btn-container {
     text-align: right;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(3) .hero {
+  #home #content-container .recipes .hero {
     height: 300px;
   }
-  #home #content-container .flex-container:nth-child(3) .background-container {
+  #home #content-container .recipes .background-container {
     background: #F4B10E;
-    padding: 30px 0;
+    padding: 30px 0 25px 0;
   }
-  #home #content-container .flex-container:nth-child(3) .background-container .primary-heading-group {
-    width: 85%;
-    margin: 0 auto;
+  #home #content-container .recipes .background-container .primary-heading-group .heading {
+    padding: 10px 0 0 0;
   }
-  #home #content-container .flex-container:nth-child(3) .background-container .primary-heading-group .heading {
-    padding: 5px 0;
+  #home #content-container .recipes .background-container .primary-heading-group p {
+    padding-top: 20px;
   }
-  #home #content-container .flex-container:nth-child(3) .background-container .primary-heading-group .btn-container {
+  #home #content-container .recipes .background-container .primary-heading-group .btn-container {
     text-align: right;
     padding-top: 10px;
   }
-  #home #content-container .flex-container:nth-child(3) .thumbnail-group .thumbnail {
-    display: inline-block;
+  #home #content-container .recipes .thumbnail-group .row {
+    padding: 30px 25px 24px 25px;
   }
-  #home #content-container .flex-container:nth-child(3) .thumbnail-group .primary-heading-group {
-    width: 85%;
-    margin: 0 auto;
+  #home #content-container .recipes .thumbnail-group .row .thumbnail {
     display: inline-block;
-    width: calc(100vw - 150px);
+    padding-right: 20px;
+  }
+}
+@media only screen and (orientation: portrait) and (max-width: 349px) {
+  #home #content-container .recipes .thumbnail-group .row .thumbnail {
+    height: 100px;
+    width: 100px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
+    display: inline-block;
     vertical-align: top;
+    width: calc(100vw - 283px);
+  }
+}
+@media only screen and (orientation: portrait) and (max-width: 349px) {
+  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
+    width: calc(100vw - 182px);
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 350px) and (max-width: 500px) {
+  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
+    width: calc(100vw - 241px);
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 501px) and (max-width: 635px) {
+  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
+    width: calc(100vw - 265px);
   }
 }
 @media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(3) .thumbnail-group .primary-heading-group {
-    width: calc(100vw - 300px);
+  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
+    width: calc(100vw - 439px);
+    padding-top: 50px;
   }
 }
 @media only screen and (orientation: portrait) and (min-width: 993px) and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(3) .thumbnail-group .primary-heading-group {
+  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
     width: calc(100vw - 300px);
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(3) .thumbnail-group .primary-heading-group .heading {
-    padding: 5px 0;
+  #home #content-container .recipes .thumbnail-group .row .primary-heading-group .sans-heading {
+    padding: 10px 0 5px 0;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .flex-container:nth-child(3) .thumbnail-group .primary-heading-group .btn-container {
+  #home #content-container .recipes .thumbnail-group .row .primary-heading-group p {
+    padding-top: 10px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .recipes .thumbnail-group .row .primary-heading-group .btn-container {
     text-align: right;
     padding-top: 10px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .shop .hero {
+    height: 350px;
+  }
+  #home #content-container .shop .primary-heading-group {
+    padding: 20px 0 40px 0;
+  }
+  #home #content-container .shop .primary-heading-group .heading {
+    padding-bottom: 9px;
+  }
+  #home #content-container .shop .primary-heading-group p {
+    padding: 15px 0 20px 0;
+  }
+  #home #content-container .shop .primary-heading-group .btn-container {
+    text-align: right;
   }
 }
 

@@ -22,10 +22,22 @@ a {
 .heading {
     font-family: $serif;
     font-weight: 500;
-    font-size: 2.5em;
+    font-size: 3.2em;
+    line-height: 1;
 
     @include large-and-up {
         font-size: 4.7em;
+    }
+}
+
+.sans-heading {
+    font-family: $sans-regular;
+    font-size: 1.2em;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+    @include large-and-up {
+        font-size: 2em;
     }
 }
 
@@ -36,6 +48,22 @@ a {
     @include large-and-up {
         font-size: 1em;
     }
+}
+
+.preview-text {
+    font-size: .9em;
+
+    @include large-and-up {
+        font-size: 1em;
+    }
+}
+
+p {
+    font-size: 1em;
+
+    @include large-and-up {
+        font-size: .9em;
+    } 
 }
 
 .button {
@@ -49,6 +77,24 @@ a {
     @include medium-and-down {
         
     }
+}
+
+.wrapper {
+    width: 85%;
+    margin: 0 auto;
+
+    @include p-medium-only {
+        width: 85%;
+    }
+}
+
+.primary-heading-group {
+    width: 85%;
+    margin: 0 auto;
+
+    @include p-medium-only {
+        width: 85%;
+    }   
 }
 
 .img-container {
@@ -410,9 +456,34 @@ a {
 
 #mobileFooter {
     background: $berry;
+    height: 30px;
+    padding: 25px;
 
-    img {
-        height: 20px;
+    .logotype-container {
+        display: inline-block;
+
+        img {
+            height: 30px;
+        }
+    }
+
+    .social-icons {
+        display: inline-block;
+        float: right;
+        padding-top: 5px;
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            a {
+                padding-left: 10px;
+                
+                img {
+                    height: 20px;
+                }
+            }
+        }
     }
 }
 
@@ -424,7 +495,11 @@ a {
 
 #home {
     #content-container {
-        .flex-container:first-child {
+        p {
+            font-size: .9em;
+        }
+
+        .featured-article {
             @include portrait {
                 .hero {
                     height: calc(100vh - 300px);
@@ -436,14 +511,14 @@ a {
                     position: relative;
 
                     .primary-heading-group {
-                        width: 85%;
+                        // width: 85%;
                         position: absolute;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
 
                         .heading {
-                            padding: 5px 0;
+                            padding: 10px 0 0 0;
                         }
 
                         .btn-container {
@@ -455,14 +530,14 @@ a {
             }
         }
 
-        .flex-container:nth-child(2) {
+        .about {
             @include portrait {
                 .wrapper {
-                    width: 80%;
-                    margin: 0 auto;
+                    // width: 80%;
+                    // margin: 0 auto;
 
                     @include p-medium-only {
-                        width: 70%;
+                        // width: 70%;
                     }
 
                     .images {
@@ -508,7 +583,7 @@ a {
             }
         }
 
-        .flex-container:nth-child(3) {
+        .recipes {
             @include portrait {
                 .hero {
                     height: 300px;
@@ -516,14 +591,18 @@ a {
 
                 .background-container {
                     background: $sunflower;
-                    padding: 30px 0;
+                    padding: 30px 0 25px 0;
 
                     .primary-heading-group {
-                        width: 85%;
-                        margin: 0 auto;
+                        // width: 85%;
+                        // margin: 0 auto;
 
                         .heading {
-                            padding: 5px 0;
+                            padding: 10px 0 0 0;
+                        }
+
+                        p {
+                            padding-top: 20px;
                         }
 
                         .btn-container {
@@ -534,43 +613,93 @@ a {
                 }
 
                 .thumbnail-group {
-                    .thumbnail {
-                        display: inline-block;   
+
+                    .row {
+                        padding: 30px 25px 24px 25px;
+
+                        .thumbnail {
+                            display: inline-block;   
+                            padding-right: 20px;
+
+                            @include xsmall-only {
+                                height: 100px;
+                                width: 100px;
+                            }
+                        }
+
+                        .primary-heading-group {
+                            // width: 85%;
+                            // margin: 0 auto;
+                            display: inline-block;
+                            vertical-align: top;
+                            width: calc(100vw - 283px);
+
+                            @include xsmall-only {
+                                width: calc(100vw - 182px)
+                            }
+
+                            @media screen and (min-width: 350px) and (max-width: 500px) {
+                                width: calc(100vw - 241px);
+                            }
+
+                            @media screen and (min-width: 501px) and (max-width: 635px) {
+                                width: calc(100vw - 265px);
+                            }
+
+                            @include p-medium-only {
+                                width: calc(100vw - 439px);
+                                padding-top: 50px;
+                            }
+
+                            @include p-large-and-up {
+                                width: calc(100vw - 300px);
+                            }
+
+                            .sans-heading {
+                                padding: 10px 0 5px 0;
+                            }
+
+                            p {
+                                padding-top: 10px;
+                            }
+
+                            .btn-container {
+                                text-align: right;
+                                padding-top: 10px;
+                            }
+                        }
                     }
 
-                    .primary-heading-group {
-                        width: 85%;
-                        margin: 0 auto;
-                        display: inline-block;
-                        width: calc(100vw - 150px);
-                        // height: 150px;
-                        vertical-align: top;
-
-                        @include p-medium-only {
-                            width: calc(100vw - 300px);
-                        }
-
-                        @include p-large-and-up {
-                            width: calc(100vw - 300px);
-                        }
-
-                        .heading {
-                            padding: 5px 0;
-                        }
-
-                        .btn-container {
-                            text-align: right;
-                            padding-top: 10px;
-                        }
-                    }
                 }
             }
         }
 
-         .flex-container:nth-child(4) {
+        .articles {
+        }
+
+        .shop {
             @include portrait {
-                
+                .hero {
+                    height: 350px;
+                }
+
+                .primary-heading-group {
+                    padding: 20px 0 40px 0;
+
+                    .heading {
+                        padding-bottom: 9px;
+                    }
+
+                    p {
+                        padding: 15px 0 20px 0;
+                    }
+
+                    .btn-container {
+                        text-align: right;
+                    }
+                }
             }
+
         }
 
         

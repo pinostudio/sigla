@@ -1,4 +1,4 @@
-	<div id="mobileFooter">
+	<div id="mobileFooter" class="medium-and-down">
 		<div class="logotype-container">
 			<a href="index.php">
 				<img src="assets/img/icons/logotype-white.svg" class="logotype">
