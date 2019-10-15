@@ -323,21 +323,25 @@ p {
   border: 1px solid #000;
   display: inline-block;
 }
-.wrapper {
-  width: 85%;
-  margin: 0 auto;
-}
-@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+@media only screen and (orientation: portrait) {
   .wrapper {
     width: 85%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (orientation: portrait) and (max-width: 349px) and (orientation: portrait) {
+  .wrapper {
+    width: 80%;
   }
 }
 
-.primary-heading-group {
-  width: 85%;
-  margin: 0 auto;
+@media only screen and (orientation: portrait) {
+  .primary-heading-group {
+    width: 85%;
+    margin: 0 auto;
+  }
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
   .primary-heading-group {
     width: 85%;
   }
@@ -385,15 +389,28 @@ p {
 }
 @media only screen and (orientation: landscape) {
   .flex-container {
-    height: 100vh;
+    height: 97vh;
     width: 100vw;
-    padding: 100px 0;
+    overflow-y: hidden;
+  }
+}
+@media only screen and (min-width: 993px) and (orientation: landscape) {
+  .flex-container {
+    padding-left: 100px;
   }
 }
 
 @media only screen and (orientation: portrait) {
   .flex-container:first-child {
     padding-top: 70px;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .content {
+    height: calc(100vh - 220px);
+    background: red;
+    margin: 100px 0;
   }
 }
 
@@ -422,6 +439,18 @@ p {
 
 @media only screen and (min-width: 993px) {
   .medium-and-down {
+    display: none;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .portrait {
+    display: none;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .landscape {
     display: none;
   }
 }
@@ -614,7 +643,7 @@ p {
 #webNav .sidebar-container .logotype-container .logotype {
   height: 50px;
   position: absolute;
-  bottom: 45px;
+  bottom: 60px;
 }
 
 #topRightNav {
@@ -717,53 +746,123 @@ p {
     padding-top: 10px;
   }
 }
+@media only screen and (orientation: landscape) {
+  #home #content-container .featured-article {
+    width: 80vw;
+  }
+  #home #content-container .featured-article .hero {
+    height: calc(100% - 150px);
+  }
+  #home #content-container .featured-article .background-container {
+    height: 150px;
+    width: 100%;
+  }
+}
 @media only screen and (orientation: portrait) {
-  #home #content-container .about .wrapper .images {
+  #home #content-container .about .content .images {
     padding: 50px 0 25px;
   }
 }
 @media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
-  #home #content-container .about .wrapper .images {
+  #home #content-container .about .content .images {
     padding: 50px 0;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .about .wrapper .images .img-container:first-child {
+  #home #content-container .about .content .images .img-container:first-child {
     height: 300px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .about .wrapper .images .img-container:nth-child(2) {
-    height: 100px;
+  #home #content-container .about .content .images .img-container:nth-child(2) {
+    height: 130px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .about .wrapper .images .img-container:last-child {
+  #home #content-container .about .content .images .img-container:last-child {
     height: 200px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .about .wrapper .text {
+  #home #content-container .about .content .text {
     padding-bottom: 50px;
   }
 }
 @media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
-  #home #content-container .about .wrapper .text {
+  #home #content-container .about .content .text {
     padding: 150px 0 0 30px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .about .wrapper .text h3 {
+  #home #content-container .about .content .text h3 {
     padding-bottom: 30px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .about .wrapper .text p {
+  #home #content-container .about .content .text p {
     padding-bottom: 25px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .about .wrapper .text .btn-container {
+  #home #content-container .about .content .text .btn-container {
+    text-align: right;
+  }
+}
+@media only screen and (orientation: landscape) {
+  #home #content-container .about {
+    width: 85vw;
+  }
+  #home #content-container .about .content .images {
+    position: relative;
+    height: calc(100vh - 220px);
+    width: 100%;
+    background: blue;
+  }
+  #home #content-container .about .content .images .img-container {
+    position: absolute;
+  }
+  #home #content-container .about .content .images .img-container:first-child {
+    height: calc(100vh - 220px);
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  #home #content-container .about .content .images .img-container:nth-child(2) {
+    height: 50vh;
+    width: 38%;
+    bottom: 0;
+  }
+  #home #content-container .about .content .images .img-container:last-child {
+    height: 35vh;
+    width: 35%;
+    right: 0;
+    bottom: 0;
+  }
+  #home #content-container .about .content .text-container {
+    position: relative;
+    height: calc(100vh - 220px);
+    width: 100%;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .about .content .text-container {
+    padding: 150px 0 0 30px;
+  }
+}
+@media only screen and (orientation: landscape) {
+  #home #content-container .about .content .text-container .text {
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    width: 70%;
+  }
+  #home #content-container .about .content .text-container .text h3 {
+    padding-bottom: 30px;
+  }
+  #home #content-container .about .content .text-container .text p {
+    padding-bottom: 25px;
+  }
+  #home #content-container .about .content .text-container .text .btn-container {
     text-align: right;
   }
 }
@@ -771,10 +870,24 @@ p {
   #home #content-container .recipes .hero {
     height: 300px;
   }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .recipes .hero {
+    height: 450px;
+  }
+}
+@media only screen and (orientation: portrait) {
   #home #content-container .recipes .background-container {
     background: #F4B10E;
     padding: 30px 0 25px 0;
   }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .recipes .background-container {
+    padding: 50px 0 45px 0;
+  }
+}
+@media only screen and (orientation: portrait) {
   #home #content-container .recipes .background-container .primary-heading-group .heading {
     padding: 10px 0 0 0;
   }
@@ -785,65 +898,118 @@ p {
     text-align: right;
     padding-top: 10px;
   }
-  #home #content-container .recipes .thumbnail-group .row {
-    padding: 30px 25px 24px 25px;
-  }
-  #home #content-container .recipes .thumbnail-group .row .thumbnail {
-    display: inline-block;
-    padding-right: 20px;
-  }
-}
-@media only screen and (orientation: portrait) and (max-width: 349px) {
-  #home #content-container .recipes .thumbnail-group .row .thumbnail {
-    height: 100px;
-    width: 100px;
-  }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
-    display: inline-block;
-    vertical-align: top;
-    width: calc(100vw - 283px);
-  }
-}
-@media only screen and (orientation: portrait) and (max-width: 349px) {
-  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
-    width: calc(100vw - 182px);
-  }
-}
-@media only screen and (orientation: portrait) and (min-width: 350px) and (max-width: 500px) {
-  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
-    width: calc(100vw - 241px);
-  }
-}
-@media only screen and (orientation: portrait) and (min-width: 501px) and (max-width: 635px) {
-  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
-    width: calc(100vw - 265px);
+  #home #content-container .recipes .thumbnail-group .wrapper {
+    width: 85%;
+    padding: 30px 0;
+    height: auto;
   }
 }
 @media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
-  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
-    width: calc(100vw - 439px);
-    padding-top: 50px;
-  }
-}
-@media only screen and (orientation: portrait) and (min-width: 993px) and (orientation: portrait) {
-  #home #content-container .recipes .thumbnail-group .row .primary-heading-group {
-    width: calc(100vw - 300px);
+  #home #content-container .recipes .thumbnail-group .wrapper {
+    padding: 50px 0;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .recipes .thumbnail-group .row .primary-heading-group .sans-heading {
+  #home #content-container .recipes .thumbnail-group .wrapper .thumbnail {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .recipes .thumbnail-group .wrapper .thumbnail {
+    padding-bottom: 45px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .recipes .thumbnail-group .wrapper .primary-heading-group {
+    width: calc(100% - 20px);
+    padding-left: 20px;
+    padding-bottom: 30px;
+  }
+  #home #content-container .recipes .thumbnail-group .wrapper .primary-heading-group .sans-heading {
     padding: 10px 0 5px 0;
   }
-}
-@media only screen and (orientation: portrait) {
-  #home #content-container .recipes .thumbnail-group .row .primary-heading-group p {
+  #home #content-container .recipes .thumbnail-group .wrapper .primary-heading-group p {
+    padding-top: 10px;
+  }
+  #home #content-container .recipes .thumbnail-group .wrapper .primary-heading-group .btn-container {
+    text-align: right;
     padding-top: 10px;
   }
 }
 @media only screen and (orientation: portrait) {
-  #home #content-container .recipes .thumbnail-group .row .primary-heading-group .btn-container {
+  #home #content-container .articles .hero {
+    height: 300px;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .articles .hero {
+    height: 450px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .articles .background-container {
+    background: #A3391C;
+    padding: 30px 0 25px 0;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .articles .background-container {
+    padding: 50px 0 45px 0;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .articles .background-container .primary-heading-group .heading {
+    padding: 10px 0 0 0;
+  }
+  #home #content-container .articles .background-container .primary-heading-group p {
+    padding-top: 20px;
+  }
+  #home #content-container .articles .background-container .primary-heading-group .btn-container {
+    text-align: right;
+    padding-top: 10px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .articles .thumbnail-group .wrapper {
+    width: 85%;
+    padding: 30px 0;
+    height: auto;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .articles .thumbnail-group .wrapper {
+    padding: 50px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .articles .thumbnail-group .wrapper .thumbnail {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .articles .thumbnail-group .wrapper .thumbnail {
+    padding-bottom: 50px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  #home #content-container .articles .thumbnail-group .wrapper .primary-heading-group {
+    width: calc(100% - 20px);
+    padding-left: 20px;
+    padding-bottom: 30px;
+  }
+  #home #content-container .articles .thumbnail-group .wrapper .primary-heading-group .sans-heading {
+    padding: 10px 0 5px 0;
+  }
+  #home #content-container .articles .thumbnail-group .wrapper .primary-heading-group p {
+    padding-top: 10px;
+  }
+  #home #content-container .articles .thumbnail-group .wrapper .primary-heading-group .btn-container {
     text-align: right;
     padding-top: 10px;
   }
@@ -852,15 +1018,33 @@ p {
   #home #content-container .shop .hero {
     height: 350px;
   }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .shop .hero {
+    height: 450px;
+  }
+}
+@media only screen and (orientation: portrait) {
   #home #content-container .shop .primary-heading-group {
     padding: 20px 0 40px 0;
   }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+  #home #content-container .shop .primary-heading-group {
+    padding: 40px 0 20px 0;
+  }
+}
+@media only screen and (orientation: portrait) {
   #home #content-container .shop .primary-heading-group .heading {
     padding-bottom: 9px;
   }
+}
+@media only screen and (orientation: portrait) {
   #home #content-container .shop .primary-heading-group p {
     padding: 15px 0 20px 0;
   }
+}
+@media only screen and (orientation: portrait) {
   #home #content-container .shop .primary-heading-group .btn-container {
     text-align: right;
   }

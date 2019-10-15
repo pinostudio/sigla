@@ -80,21 +80,25 @@ p {
 }
 
 .wrapper {
-    width: 85%;
-    margin: 0 auto;
-
-    @include p-medium-only {
+    @include portrait {
         width: 85%;
+        margin: 0 auto;
+
+        @include p-xsmall-only {
+            width: 80%;
+        }
     }
 }
 
 .primary-heading-group {
-    width: 85%;
-    margin: 0 auto;
-
-    @include p-medium-only {
+    @include portrait {
         width: 85%;
-    }   
+        margin: 0 auto;
+
+        @include p-medium-only {
+            width: 85%;
+        }   
+    }
 }
 
 .img-container {
@@ -139,15 +143,29 @@ p {
     clear: both;
 
     @include landscape {
-        height: 100vh;
+        height: 97vh;
         width: 100vw;
-        padding: 100px 0;
+        overflow-y: hidden;
+        // overflow-: hidden;
+        // padding: 100px 0;
+    }
+
+    @include l-large-and-up {
+        padding-left: 100px;
     }
 }
 
 .flex-container:first-child {
     @include portrait {
         padding-top: 70px;
+    }
+}
+
+.content {
+    @include landscape {
+        height: $content-height-landscape;
+        background: red;
+        margin: 100px 0;
     }
 }
 
@@ -178,6 +196,19 @@ p {
         display: none;
     }
 }
+
+.portrait {
+    @include landscape {
+        display: none;
+    }
+}
+
+.landscape {
+    @include portrait {
+        display: none;
+    }
+}
+
 
 
 /*
@@ -398,7 +429,7 @@ p {
             .logotype {
                 height: 50px;
                 position: absolute;
-                bottom: 45px;
+                bottom: 60px;
             }
         }
     }
@@ -528,18 +559,24 @@ p {
                     }
                 }
             }
+
+            @include landscape {
+                width: 80vw;
+
+                .hero {
+                    height: calc(100% - 150px);
+                }
+
+                .background-container {
+                    height: 150px;
+                    width: 100%;
+                }
+            }
         }
 
         .about {
             @include portrait {
-                .wrapper {
-                    // width: 80%;
-                    // margin: 0 auto;
-
-                    @include p-medium-only {
-                        // width: 70%;
-                    }
-
+                .content {
                     .images {
                         padding: 50px 0 25px;
 
@@ -552,7 +589,7 @@ p {
                         }
 
                         .img-container:nth-child(2) {
-                            height: 100px;
+                            height: 130px;
                         }
 
                         .img-container:last-child {
@@ -581,22 +618,110 @@ p {
                     }
                 }
             }
+
+            @include landscape {
+                width: 85vw;
+
+                .content {
+
+                    .images {
+                        position: relative;
+                        // height: 500px;
+                        height: $content-height-landscape;
+                        width: 100%;
+                        background: blue;
+                        // height: $content-height-landscape;
+                        // height: 100vh;
+                        // padding: 50px 0 25px;
+
+                        @include p-medium-only {
+                            // padding: 50px 0;
+                        }
+
+                        .img-container {
+                            position: absolute;
+                        }
+
+                        .img-container:first-child {
+                            height: $content-height-landscape;
+                            // height: 100%;  
+                            width: 60%;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                        }
+
+                        .img-container:nth-child(2) {
+                            height: 50vh;
+                            // height: 100%;
+                            width: 38%;
+                            bottom: 0;
+                        }
+
+                        .img-container:last-child {
+                            height: 35vh;
+                            // height: 100%;
+                            width: 35%;
+                            right: 0;
+                            bottom: 0;
+                        }                    
+                    }
+
+                    .text-container {
+                        // padding-bottom: 50px;
+                        position: relative;
+                        height: $content-height-landscape;
+                        width: 100%;
+
+                        @include p-medium-only {
+                            padding: 150px 0 0 30px;
+                        }
+
+                        .text {
+                            position: absolute;
+                            bottom: 100px;
+                            left: 50px;
+                            // bottom: 50%;
+                            // left: 50%;
+                            // transform: translate(-50%, -50%);
+                            width: 70%;
+
+                            h3 {
+                                padding-bottom: 30px;
+                            }
+
+                            p {
+                                padding-bottom: 25px; 
+                            }
+
+                            .btn-container {
+                                text-align: right;
+                            }
+                        }
+
+                    }
+                }
+            }
         }
 
         .recipes {
             @include portrait {
                 .hero {
                     height: 300px;
+
+                    @include p-medium-only {
+                        height: 450px;
+                    }
                 }
 
                 .background-container {
                     background: $sunflower;
                     padding: 30px 0 25px 0;
 
-                    .primary-heading-group {
-                        // width: 85%;
-                        // margin: 0 auto;
+                    @include p-medium-only {
+                        padding: 50px 0 45px 0;
+                    }
 
+                    .primary-heading-group {
                         .heading {
                             padding: 10px 0 0 0;
                         }
@@ -614,46 +739,29 @@ p {
 
                 .thumbnail-group {
 
-                    .row {
-                        padding: 30px 25px 24px 25px;
+                    .wrapper {
+                        width: 85%;
+                        padding: 30px 0;
+                        height: auto;
+
+                        @include p-medium-only {
+                            padding: 50px 0;
+                        }
 
                         .thumbnail {
-                            display: inline-block;   
-                            padding-right: 20px;
+                            width: 100%;
+                            height: auto;
+                            padding-bottom: 30px;
 
-                            @include xsmall-only {
-                                height: 100px;
-                                width: 100px;
+                            @include p-medium-only {
+                                padding-bottom: 45px;
                             }
                         }
 
                         .primary-heading-group {
-                            // width: 85%;
-                            // margin: 0 auto;
-                            display: inline-block;
-                            vertical-align: top;
-                            width: calc(100vw - 283px);
-
-                            @include xsmall-only {
-                                width: calc(100vw - 182px)
-                            }
-
-                            @media screen and (min-width: 350px) and (max-width: 500px) {
-                                width: calc(100vw - 241px);
-                            }
-
-                            @media screen and (min-width: 501px) and (max-width: 635px) {
-                                width: calc(100vw - 265px);
-                            }
-
-                            @include p-medium-only {
-                                width: calc(100vw - 439px);
-                                padding-top: 50px;
-                            }
-
-                            @include p-large-and-up {
-                                width: calc(100vw - 300px);
-                            }
+                            width: calc(100% - 20px);
+                            padding-left: 20px;
+                            padding-bottom: 30px;
 
                             .sans-heading {
                                 padding: 10px 0 5px 0;
@@ -675,16 +783,100 @@ p {
         }
 
         .articles {
+            @include portrait {
+                .hero {
+                    height: 300px;
+
+                    @include p-medium-only {
+                        height: 450px;
+                    }
+                }
+
+                .background-container {
+                    background: $berry;
+                    padding: 30px 0 25px 0;
+
+                    @include p-medium-only {
+                        padding: 50px 0 45px 0;
+                    }
+
+                    .primary-heading-group {
+                        .heading {
+                            padding: 10px 0 0 0;
+                        }
+
+                        p {
+                            padding-top: 20px;
+                        }
+
+                        .btn-container {
+                            text-align: right;
+                            padding-top: 10px;
+                        }
+                    }
+                }
+
+                .thumbnail-group {
+
+                    .wrapper {
+                        width: 85%;
+                        padding: 30px 0;
+                        height: auto;
+
+                        @include p-medium-only {
+                            padding: 50px;
+                        }
+
+                        .thumbnail {
+                            width: 100%;
+                            height: auto;
+                            padding-bottom: 30px;
+
+                            @include p-medium-only {
+                                padding-bottom: 50px;
+                            }
+                        }
+
+                        .primary-heading-group {
+                            width: calc(100% - 20px);
+                            padding-left: 20px;
+                            padding-bottom: 30px;
+
+                            .sans-heading {
+                                padding: 10px 0 5px 0;
+                            }
+
+                            p {
+                                padding-top: 10px;
+                            }
+
+                            .btn-container {
+                                text-align: right;
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+
+                }
+            }
         }
 
         .shop {
             @include portrait {
                 .hero {
                     height: 350px;
+
+                    @include p-medium-only {
+                        height: 450px;
+                    }
                 }
 
                 .primary-heading-group {
                     padding: 20px 0 40px 0;
+
+                    @include p-medium-only {
+                        padding: 40px 0 20px 0;
+                    }
 
                     .heading {
                         padding-bottom: 9px;
